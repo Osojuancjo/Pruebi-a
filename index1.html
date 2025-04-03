@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARK: Survival Evolved - Menú de Inicio</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="audio.css">
+</head>
+<body>
+    <div class="video-background">
+        <video autoplay muted loop>
+            <source src="Fondo.mp4" type="video/mp4">
+            Tu navegador no soporta video.
+        </video>
+    </div>
+    
+   <audio id="background-audio" loop>
+  <source src="musica_fondo.mp3" type="audio/mpeg">
+  <source src="musica_fondo.ogg" type="audio/ogg">
+  Tu navegador no soporta audio.
+</audio>
+
+    <!-- Icono de bocina -->
+    <div class="audio-control" onclick="toggleAudio()">
+        <img src="bocina.png" alt="Control de Audio" id="audio-icon">
+    </div>
+
+    <header>
+        <div class="menu container">
+        </div>
+    </header>
+    <main>
+        <div class="menu-container">
+            <nav class="main-menu">
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Dinosaurios</a></li>
+                    <li><a href="#">Guía de supervivencia</a></li>
+                    <li><a href="#">Galería</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="info-box" style="color: #ffffffd0">
+                <h2>Actualizaciones y Noticias</h2>
+                <p>Hoja de ruta de Lost Ark 2025 – Parte 2: </p>
+                <ul>
+                    <li>Se ha publicado la segunda parte de la hoja de ruta de Lost Ark para 2025, que cubre los próximos meses. </li>
+                </ul>
+                <p>Actualización de marzo de 2025:</p>
+                <ul>
+                    <li>La actualización de marzo ha llegado con una gran cantidad de contenido emocionante, eventos y recompensas.</li>
+                </ul>
+                <p>Retorno dorado</p>
+                <ul>
+                    <li>El último capítulo de la Caja de música de los recuerdos, la vuelta de la rana dorada y recompensas de incursiones mejoradas están disponibles.</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 Comunidad ARK | No afiliado con Studio Wildcard</p>
+    </footer>
+
+    <script src="audio.js"> </script>
+</body>
+</html>

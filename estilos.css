@@ -1,0 +1,136 @@
+/* Estilos generales */
+body {
+    display: flex;
+    flex-direction: column; /* Coloca los elementos en columna */
+    min-height: 100vh; /* Asegura que el body ocupe toda la altura de la ventana */
+    margin: 0; /* Elimina el margen por defecto */
+}
+
+/* Fondo de video */
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1; /* Coloca el video detrás del contenido */
+}
+
+video {
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/* Contenedor del menú principal */
+.menu-container {
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: flex-start; /* Alinea los elementos al inicio verticalmente */
+    padding: 20px;
+}
+
+/* Menú principal */
+.main-menu {
+    width: 175px; /* Ancho del menú */
+    margin-right: 58%; /* Espacio a la derecha del menú */
+    margin-top: 13%;
+}
+
+.main-menu ul {
+    list-style-type: none; /* Oculta los puntos de la lista */
+    padding: 0; /* Elimina el padding por defecto */
+    margin: 0; /* Elimina el margin por defecto */
+}
+
+.main-menu ul li {
+    margin: 21px 0; /* Espaciado entre los elementos del menú */
+}
+
+.main-menu ul li a {
+    color: #ffffff;
+    padding: 10px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    display: block; /* Hace que el área del enlace sea más grande */
+}
+
+.main-menu ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* Fondo al pasar el mouse */
+    border-radius: 5px; /* Esquinas redondeadas */
+}
+
+/* Cuadro de información */
+.info-box {
+    position: relative; /* Agrega posición relativa */
+    background-color: rgba(0, 128, 0, 0.2); /* Ajusta la opacidad del color de fondo */
+    padding: 8px;
+    border-radius: 22px;
+    width: 90%; /* Cambia a un porcentaje para que sea responsivo */
+    max-width: 600px; /* Ancho máximo */
+    margin: 20px auto; /* Centra el cuadro */
+}
+
+.info-box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('FP.png');
+    background-size: cover;
+    opacity: 0.1; /* Ajusta la opacidad de la imagen de fondo */
+    z-index: -1; /* Asegura que la imagen de fondo esté detrás del contenido */
+}
+
+.info-box h2 {
+    margin-top: 0; /* Elimina el margen superior */
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente para el pie de página */
+    position: fixed; /* Asegura que el pie de página esté en su lugar */
+    bottom: 0;
+    width: 100%;
+    color: #ffffff; /* Color del texto del pie de página */
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    .main-menu {
+        margin-right: 0; /* Elimina el margen derecho en pantallas pequeñas */
+        margin-top: 5%; /* Ajusta el margen superior */
+        width: 100%; /* Ancho completo en pantallas pequeñas */
+    }
+
+    .audio-control {
+        width: 40px; /* Ajusta el tamaño del icono en pantallas pequeñas */
+        height: 40px;
+    }
+
+    .info-box {
+        width: 95%; /* Ancho casi completo en pantallas pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .main-menu ul li {
+        margin: 15px 0; /* Reduce el espaciado entre elementos en pantallas muy pequeñas */
+    }
+
+    .audio-control {
+        width: 35px; /* Ajusta aún más el tamaño del icono */
+        height: 35px;
+    }
+}
